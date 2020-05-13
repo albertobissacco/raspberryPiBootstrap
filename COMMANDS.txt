@@ -1,0 +1,34 @@
+# GENERAL COMMANDS
+apt-get update:		  Synchronizes the list of packages on your system to the list in the repositories. Use it before installing new packages to make sure you are installing the latest version.
+apt-get upgrade:	  Upgrades all of the software packages you have installed.
+clear:			        Clears previously run commands and text from the terminal screen.
+date:			          Prints the current date.
+nano example.txt:	  Opens the file example.txt in the Linux text editor Nano.
+poweroff:		        To shutdown immediately.
+raspi-config:		    Opens the configuration settings menu.
+reboot:			        To reboot immediately.
+shutdown -h now:	  To shutdown immediately.
+shutdown -h 01:22:  To shutdown at 1:22 AM.
+startx:			        Opens the GUI (Graphical User Interface).
+systemctl <start/stop/enable/disable/restart> servicename:      manage deamon services running at startup
+service servicename {start|stop|status|restart|reload|force-reload}:      manage deamon services like systemctl
+find / -n example.txt:	    Searches the whole system for the file example.txt and outputs a list of all directories that contain the file.
+
+# NETWORKING AND INTERNET COMMANDS
+ifconfig:		         To check the status of the wireless connection you are using  (to see if wlan0 has acquired an IP address).
+iwconfig:		         To check which network the wireless adapter is using.
+iwlist wlan0 scan:	 Prints a list of the currently available wireless networks.
+
+# SYSTEM INFORMATION COMMANDS
+cat /proc/meminfo:	 Shows details about your memory.
+cat /proc/partitions:Shows the size and number of partitions on your SD card or hard drive.
+cat /proc/version:	 Shows you which version of the Raspberry Pi you are using.
+df -h:			         Shows information about the available disk space.
+df /:			           Shows how much free disk space is available.
+dpkg – –get–selections | grep XXX:      Shows all of the installed packages that are related to XXX.
+dpkg – –get–selections:	Shows all of your installed packages.
+free:			           Shows how much free memory is available.
+hostname -I:		     Shows the IP address of your Raspberry Pi.
+lsusb:			         Lists USB hardware connected to your Raspberry Pi.
+vcgencmd measure_temp:	    Shows the temperature of the CPU.
+vcgencmd get_mem arm && vcgencmd get_mem gpu:     Shows the memory split between the CPU and GPU.
