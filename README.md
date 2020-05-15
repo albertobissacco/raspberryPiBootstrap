@@ -42,3 +42,9 @@ Follow these steps to have a pi up and running.
     - docker: `sudo curl -sSL https://get.docker.com | sh`
         and add the pi user to the docker group for use docker command as non-root user `sudo usermod -aG docker pi`
     - docker compose:  `sudo pip3 install docker-compose`
+    
+    
+### Customization
+*Message Of The Day* : this is the message you see when you enter the terminal. For a new custom message create this file "/etc/profile.d/motd.sh". `cd /etc/profile.d/ && sudo curl -O https://raw.githubusercontent.com/albertobissacco/raspberryPiBootstrap/master/motd.sh`. 
+This file is loaded after /etc/update/motd.d and instead of the original /etc/motd.
+
