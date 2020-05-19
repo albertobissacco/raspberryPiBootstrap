@@ -48,3 +48,16 @@ Follow these steps to have a pi up and running.
 *Message Of The Day* : this is the message you see when you enter the terminal. For a new custom message create this file "/etc/profile.d/motd.sh". `cd /etc/profile.d/ && sudo curl -O https://raw.githubusercontent.com/albertobissacco/raspberryPiBootstrap/master/motd.sh`. 
 This file is loaded after /etc/update/motd.d and instead of the original /etc/motd.
 
+
+### uninstall Docker
+For older versions of docker installed via curl
+`sudo curl -sSL https://get.docker.com/ | sh`
+You can remove docker with
+`sudo apt-get remove --auto-remove docker`
+
+For newer versions according to online documentation
+`sudo apt-get purge docker-ce`
+
+To delete all data (Images, Containers, Volumes and configs)
+`sudo rm -rf /var/lib/docker`
+
