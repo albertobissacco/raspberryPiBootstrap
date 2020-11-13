@@ -37,6 +37,7 @@ Follow these steps to have a pi up and running.
 7. update the system with `sudo apt-get -y update && sudo apt-get -y upgrade`
 
 8. install this basic packages:
+    - git: `sudo apt install git`
     - tmux:  `sudo apt-get -y install tmux`
     - pip3 (required for installing docker-compose): `sudo apt -y install python3-pip`
     - docker: `sudo curl -sSL https://get.docker.com | sh`
