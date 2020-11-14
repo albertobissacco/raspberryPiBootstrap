@@ -46,7 +46,7 @@ Done!
 - docker: `sudo curl -sSL https://get.docker.com | sh` and add the pi user to the docker group for use docker command as non-root user `sudo usermod -aG docker pi`
 - docker compose:  `sudo pip3 install docker-compose`
 
-## Optional packages  
+Optional  
  - piVPN
  
 ## Containers
