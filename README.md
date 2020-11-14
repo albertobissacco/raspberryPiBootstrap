@@ -1,14 +1,14 @@
-# RaspberryPi Bootstrap
+# Raspberry Pi Bootstrap
 
-Follow these steps to have a pi up and running.
+Follow these steps to have a pi up and running:
 
 1. Download the OS Raspbian Lite. (https://www.raspberrypi.org/downloads/raspbian/
 
-2. Flash the image to the Sd Card with etcher app (https://www.balena.io/etcher/)
+2. Flash the image to the SD-Card with etcher app (https://www.balena.io/etcher/)
 
-3. **enable SSH** - Create file named "ssh" and put it on the Sd Card.
+3. enable SSH - Create file named "ssh" and drag it to the SD-Card.
 
-4. **enable/disable WIFI**
+4. enable or disable WiFi
 
     1. - to DISABLE wifi & bluetooth add these two lines at the end of  "/boot/config.txt"
 
@@ -36,21 +36,29 @@ Follow these steps to have a pi up and running.
 
 7. update the system with `sudo apt-get -y update && sudo apt-get -y upgrade`
 
-8. install this basic packages:
-    - git: `sudo apt install git`
-    - tmux:  `sudo apt-get -y install tmux`
-    - pip3 (required for installing docker-compose): `sudo apt -y install python3-pip`
-    - docker: `sudo curl -sSL https://get.docker.com | sh`
-        and add the pi user to the docker group for use docker command as non-root user `sudo usermod -aG docker pi`
-    - docker compose:  `sudo pip3 install docker-compose`
-    
-    
-### Customization
+Done!
+
+
+## Packages to install
+- git: `sudo apt install git`
+- tmux:  `sudo apt-get -y install tmux`
+- pip3 (required for installing docker-compose): `sudo apt -y install python3-pip`
+- docker: `sudo curl -sSL https://get.docker.com | sh` and add the pi user to the docker group for use docker command as non-root user `sudo usermod -aG docker pi`
+- docker compose:  `sudo pip3 install docker-compose`
+
+## Optional packages  
+ - piVPN
+ 
+## Containers
+ - portainer
+ - trefik
+
+## Customization
 *Message Of The Day* : this is the message you see when you enter the terminal. For a new custom message create this file "/etc/profile.d/motd.sh". `cd /etc/profile.d/ && sudo curl -O https://raw.githubusercontent.com/albertobissacco/raspberryPiBootstrap/master/motd.sh`. 
 This file is loaded after /etc/update/motd.d and instead of the original /etc/motd.
 
 
-### uninstall Docker
+## Uninstall Docker
 For older versions of docker installed via curl
 `sudo curl -sSL https://get.docker.com/ | sh`
 You can remove docker with
