@@ -41,6 +41,7 @@ Done!
 
 ## Packages to install
 - git: `sudo apt install git`
+- vim: `sudo apt -y install vim`
 - tmux:  `sudo apt-get -y install tmux`
 - pip3 (required for installing docker-compose): `sudo apt -y install python3-pip`
 - docker: `sudo curl -sSL https://get.docker.com | sh` and add the pi user to the docker group for use docker command as non-root user `sudo usermod -aG docker pi`
